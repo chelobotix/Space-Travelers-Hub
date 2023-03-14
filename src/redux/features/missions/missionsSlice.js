@@ -9,7 +9,9 @@ const initialState = {
 export const fetchMissions = createAsyncThunk('get/missions', async () => {
   const url = 'https://api.spacexdata.com/v3/missions'
   const response = await fetch(url)
-  return response.json()
+  let data = await response.json()
+  data = data.map(({ mission_id, mission_name, description }) => ({ mission_id, mission_name, description }))
+  return data;
 })
 
 export const missionsSlice = createSlice({

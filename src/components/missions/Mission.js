@@ -1,7 +1,7 @@
 import style from './Mission.module.css'
 
 const Mission = (props) => {
-  console.log(props.mission_name)
+
   const { mission_id, mission_name, description } = props.mission
   return (
     <>

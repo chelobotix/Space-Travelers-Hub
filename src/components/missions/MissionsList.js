@@ -15,12 +15,6 @@ const MissionsList = () => {
 
   }, [dispatch])
 
-  useEffect(() => {
-    console.log(state.missionsArray)
-
-
-  }, [state])
-
   if (!state.missionsArray) {
     return <h1>Loading...</h1>;
   }
