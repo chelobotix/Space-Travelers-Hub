@@ -1,10 +1,11 @@
 <a name="readme-top"></a>
 
+
 <div align="center">
 
-  <img src="https://user-images.githubusercontent.com/65084923/222763718-00d2e014-529e-4bdd-b9ea-105310b96ce7.png" alt="logo" width="300"  height="auto" />
+  <img src="https://user-images.githubusercontent.com/65084923/225158143-61776e1f-cec5-47c6-9be5-53de78fe035d.jpg" alt="logo" width="350"  height="auto" />
   <br/>
-  <img src="https://user-images.githubusercontent.com/65084923/220199943-ce6cd5da-d55e-4149-a0ac-8c588216d81f.png" alt="logo" width="300"  height="auto" />
+  <img src="https://user-images.githubusercontent.com/65084923/220199943-ce6cd5da-d55e-4149-a0ac-8c588216d81f.png" alt="logo" width="200"  height="auto" />
   <br/>
   <img src="https://user-images.githubusercontent.com/65084923/220200035-01fa5e08-af6a-495b-b597-55157a2b7d95.gif" alt="logo" />
   <br/>
