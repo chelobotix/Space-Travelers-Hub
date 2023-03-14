@@ -1,23 +1,25 @@
 import { NavLink } from "react-router-dom";
 import planetImg from "../../assets/images/planet.png"
+import style from './Navbar.module.css'
 
 const NavBar = () => {
   return (
-    <nav>
-      <ul>
+    <nav className={style.nav}>
+      <ul className={style.ul}>
         <li>
           <NavLink
             to="/rockets"
-            style={({ isActive }) => (isActive ? { color: "red" } : {})}
+            className={style.logo}
           >
-            <img src={planetImg} alt="" />
-            <p>Space Travelers' Hub</p>
+            <img className={style.img} src={planetImg} alt="" />
+            <p className={style.logoName}>Space Travelers' Hub</p>
           </NavLink>
         </li>
-        <li>
+        <li className={style.right}>
           <NavLink
             to="/rockets"
             style={({ isActive }) => (isActive ? { color: "red" } : {})}
+            className={style.normalLink}
           >
             Rockets
           </NavLink>
@@ -26,6 +28,7 @@ const NavBar = () => {
           <NavLink
             to="/missions"
             style={({ isActive }) => (isActive ? { color: "red" } : {})}
+            className={style.normalLink}
           >
             Missions
           </NavLink>
@@ -34,6 +37,7 @@ const NavBar = () => {
           <NavLink
             to="/profile"
             style={({ isActive }) => (isActive ? { color: "red" } : {})}
+            className={`${style.normalLink} ${style.border}`}
           >
             Profile
           </NavLink>

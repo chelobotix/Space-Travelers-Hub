@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import NavBar from "./components/Header/Navbar";
+import Header from "./components/Header/Header";
 import RocketList from "./components/rockets/RocketList";
 import MissionsList from "./components/missions/MissionsList";
 import Profile from "./components/Profile/Profile";
@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <NavBar />
+        <Header />
         <Routes>
           <Route index element={<RocketList />} />
           <Route path="rockets" element={<RocketList />} />
