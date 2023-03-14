@@ -1,5 +1,5 @@
-const RocketLists = () => {
-    return <h1>Works</h1>
+const RocketList = () => {
+    return <h1>Rockets</h1>
 }
 
-export default RocketLists;
+export default RocketList;
