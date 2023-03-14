@@ -39,7 +39,7 @@ export const missionsSlice = createSlice({
           missionsArray:
             state.missionsArray.map((mission) => {
               if (mission.mission_id === action.payload) {
-                return { ...mission, reserved: true }
+                return { ...mission, reserved: false }
               }
               return mission
             })

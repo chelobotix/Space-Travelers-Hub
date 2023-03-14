@@ -1,14 +1,17 @@
 import style from './Mission.module.css'
 import { useDispatch } from 'react-redux'
-import { joinMission } from '../../redux/features/missions/missionsSlice';
+import { joinMission, leaveMission } from '../../redux/features/missions/missionsSlice';
 
 const Mission = (props) => {
   const dispatch = useDispatch();
   const { mission_id, mission_name, description, reserved } = props.mission
-  console.log('render mission')
+
   const handleJoinMission = (id) => {
-    console.log(id)
     dispatch(joinMission(id));
+  }
+
+  const handleLeaveMission = (id) => {
+    dispatch(leaveMission(id));
   }
 
   return (
@@ -22,9 +25,9 @@ const Mission = (props) => {
         {!reserved ? <p>NOT A MEMBER</p> : <p>ACTIVE MEMBER</p>}
       </td>
       <td className={style.border}>
-        <button onClick={() => handleJoinMission(mission_id)} type="button">
-          {!reserved ? <p>Join Mission</p> : <p>Leave Mission</p>}
-        </button>
+        {!reserved ?
+          <button onClick={() => handleJoinMission(mission_id)} type="button">Join Mission</button> :
+          <button onClick={() => handleLeaveMission(mission_id)} type="button">Leave Mission</button>}
       </td>
     </>
   )
