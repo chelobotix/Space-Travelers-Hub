@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
-import { useState, useEffect } from "react";
+import { useEffect, } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, fetchMissions } from "../../redux/features/missions/missionsSlice";
+import { fetchMissions } from "../../redux/features/missions/missionsSlice";
 import Mission from "./Mission";
 import style from './MissionsList.module.css'
 
@@ -13,14 +13,14 @@ const MissionsList = () => {
   useEffect(() => {
     dispatch(fetchMissions())
 
-  }, [dispatch])
+  }, [])
 
   if (!state.missionsArray) {
     return <h1>Loading...</h1>;
   }
 
   return (
-    <div>
+    <div className={style.tableContainer}>
       <table className={style.table}>
         <thead>
           <tr>

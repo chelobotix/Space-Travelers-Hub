@@ -16,18 +16,18 @@ const Mission = (props) => {
 
   return (
     <>
-      <td className={style.border}>
+      <td className={`${style.border} ${style.title}`}>
         {mission_name}
       </td>
-      <td className={style.border}>
+      <td className={`${style.border} ${style.description}`}>
         {description}</td>
-      <td className={style.border}>
-        {!reserved ? <p>NOT A MEMBER</p> : <p>ACTIVE MEMBER</p>}
+      <td className={`${style.border} ${style.status}`}>
+        {!reserved ? <span className={style.status1}>NOT A MEMBER</span> : <span className={style.status2}>Active Member</span>}
       </td>
-      <td className={style.border}>
+      <td className={`${style.border} ${style.status}`}>
         {!reserved ?
-          <button onClick={() => handleJoinMission(mission_id)} type="button">Join Mission</button> :
-          <button onClick={() => handleLeaveMission(mission_id)} type="button">Leave Mission</button>}
+          <button className={style.btn1} onClick={() => handleJoinMission(mission_id)} type="button">Join Mission</button> :
+          <button className={style.btn2} onClick={() => handleLeaveMission(mission_id)} type="button">Leave Mission</button>}
       </td>
     </>
   )
