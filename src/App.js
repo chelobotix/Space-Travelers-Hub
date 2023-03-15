@@ -1,10 +1,18 @@
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import NavBar from "./components/Header/Navbar";
+import RocketLists from "./components/rockets/RocketList";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Works!</h1>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <NavBar />
+        <Routes>
+          <Route index element={<RocketLists />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
