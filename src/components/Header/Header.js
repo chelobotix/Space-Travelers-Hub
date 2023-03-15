@@ -1,5 +1,5 @@
-import NavBar from "./Navbar";
-import style from './Header.module.css'
+import NavBar from './Navbar';
+import style from './Header.module.css';
 
 const Header = () => (
   <header className={style.header}>
@@ -7,4 +7,4 @@ const Header = () => (
   </header>
 );
 
-export default Header
+export default Header;

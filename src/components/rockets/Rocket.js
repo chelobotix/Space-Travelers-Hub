@@ -1,16 +1,17 @@
-import { useDispatch, useSelector } from "react-redux";
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 
 // import style from './Mission.module.css'
 import {
   joinRocket,
   leaveRocket,
-} from "../../redux/features/rockets/rocketsSlice";
+} from '../../redux/features/rockets/rocketsSlice';
 
 const Rocket = (props) => {
-  const { id, rocket_name, description, flickr_images, reserved } =
-    props.rocket;
+  const {
+    id, name, description, image, reserved,
+  } = props;
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.rockets);
 
   const handleReserveRocket = (id) => {
     dispatch(joinRocket(id));
@@ -23,26 +24,37 @@ const Rocket = (props) => {
   return (
     <>
       <div>
-        <img src={flickr_images[0]} />
+        <img src={image[0]} alt="rocketImage" />
       </div>
       <div>
-        <h3>{rocket_name}</h3>
+        <h3>{name}</h3>
         <p>
           <span>{reserved && <p>Reserved</p>}</span>
           {description}
         </p>
         {!reserved ? (
-          <button onClick={() => handleReserveRocket(id)}>
+          <button type="button" onClick={() => handleReserveRocket(id)}>
             Reserve Rocket
           </button>
         ) : (
-          <button onClick={() => handleLeaveReserveRocket(id)}>
+          <button type="button" onClick={() => handleLeaveReserveRocket(id)}>
             Cancel Reservation
           </button>
         )}
       </div>
     </>
   );
+};
+
+Rocket.defaultProps = {
+  id: '', name: '', description: '', image: '', reserved: '',
+};
+Rocket.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  reserved: PropTypes.string,
 };
 
 export default Rocket;
