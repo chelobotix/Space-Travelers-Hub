@@ -24,8 +24,27 @@ export const rocketsSlice = createSlice({
   name: "Rockets",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.count += 1;
+    joinRocket: (state, action) => {
+      return {
+        ...state,
+        rocketsArray: state.rocketsArray.map((rocket) => {
+          if (rocket.id === action.payload) {
+            return { ...rocket, reserved: true };
+          }
+          return rocket;
+        }),
+      };
+    },
+    leaveRocket: (state, action) => {
+      return {
+        ...state,
+        rocketsArray: state.rocketsArray.map((rocket) => {
+          if (rocket.id === action.payload) {
+            return { ...rocket, reserved: false };
+          }
+          return rocket;
+        }),
+      };
     },
   },
   extraReducers: (builder) => {
@@ -55,6 +74,6 @@ export const rocketsSlice = createSlice({
   },
 });
 
-export const { increment } = rocketsSlice.actions;
+export const { joinRocket, leaveRocket } = rocketsSlice.actions;
 
 export default rocketsSlice.reducer;
