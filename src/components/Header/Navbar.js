@@ -1,16 +1,13 @@
 import { NavLink } from "react-router-dom";
-import planetImg from "../../assets/images/planet.png"
-import style from './Navbar.module.css'
+import planetImg from "../../assets/images/planet.png";
+import style from "./Navbar.module.css";
 
 const NavBar = () => {
   return (
     <nav className={style.nav}>
       <ul className={style.ul}>
         <li>
-          <NavLink
-            to="/rockets"
-            className={style.logo}
-          >
+          <NavLink to="/rockets" className={style.logo}>
             <img className={style.img} src={planetImg} alt="" />
             <p className={style.logoName}>Space Travelers' Hub</p>
           </NavLink>
@@ -43,11 +40,9 @@ const NavBar = () => {
           </NavLink>
         </li>
       </ul>
+      <hr className={`${style.hr}`}></hr>
     </nav>
-  )
-}
+  );
+};
 
 export default NavBar;
-
-
-
