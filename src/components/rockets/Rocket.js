@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-
-// import style from './Mission.module.css'
+import style from "./Rocket.module.css";
 import {
   joinRocket,
   leaveRocket,
@@ -22,24 +21,33 @@ const Rocket = (props) => {
 
   return (
     <>
-      <div>
-        <img src={flickr_images[0]} />
-      </div>
-      <div>
-        <h3>{rocket_name}</h3>
-        <p>
-          <span>{reserved && <p>Reserved</p>}</span>
-          {description}
-        </p>
-        {!reserved ? (
-          <button onClick={() => handleReserveRocket(id)}>
-            Reserve Rocket
-          </button>
-        ) : (
-          <button onClick={() => handleLeaveReserveRocket(id)}>
-            Cancel Reservation
-          </button>
-        )}
+      <div className={`${style.grid}`}>
+        <div className={`${style.border}`}>
+          <img src={flickr_images[0]} className={`${style.img}`} />
+        </div>
+        <div className={``}>
+          <h3>{rocket_name}</h3>
+          <p>
+            <span>
+              {reserved && (
+                <button className={`${style.btn1}`}>Reserved</button>
+              )}
+            </span>
+            {description}
+          </p>
+          {!reserved ? (
+            <button
+              className={`${style.btn1}`}
+              onClick={() => handleReserveRocket(id)}
+            >
+              Reserve Rocket
+            </button>
+          ) : (
+            <button className={`${style.btn2}`} onClick={() => handleLeaveReserveRocket(id)}>
+              Cancel Reservation
+            </button>
+          )}
+        </div>
       </div>
     </>
   );
