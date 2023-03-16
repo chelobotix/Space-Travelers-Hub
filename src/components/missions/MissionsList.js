@@ -1,19 +1,11 @@
 import { v4 as uuidv4 } from 'uuid';
-import { useEffect, } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchMissions } from "../../redux/features/missions/missionsSlice";
+import { useSelector } from "react-redux";
 import Mission from "./Mission";
 import style from './MissionsList.module.css'
 
 const MissionsList = () => {
-  const dispatch = useDispatch();
   const state = useSelector((state) => state.missions)
 
-
-  useEffect(() => {
-    dispatch(fetchMissions())
-
-  }, [])
 
   if (!state.missionsArray) {
     return <h1>Loading...</h1>;
