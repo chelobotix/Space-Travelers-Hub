@@ -6,8 +6,8 @@ import {
   increment,
   fetchRockets,
 } from "../../redux/features/rockets/rocketsSlice";
-// import Mission from "./Mission";
-// import style from "./MissionsList.module.css";
+
+import style from "./RocketList.module.css";
 
 const RocketList = () => {
   const dispatch = useDispatch();

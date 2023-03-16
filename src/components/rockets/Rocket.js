@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-
-// import style from './Mission.module.css'
+import style from './Rocket.module.css'
 import {
   joinRocket,
   leaveRocket,
