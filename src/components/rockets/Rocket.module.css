@@ -1,15 +1,30 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  gap: 10px;
+  padding-bottom: 10px;
 }
 
 .border {
@@ -18,24 +33,32 @@ code {
 }
 
 .img {
-  width: 100%;
-  height: 80%;
+  width: 300px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+.descriptionContainer {
+  text-align: left;
+  padding-left: 10px;
 }
 
 .description {
-  width: 50%;
-  padding: 5px 5px 20px 5px;
+  width: 95%;
+  padding: 5px 5px 0 5px;
+}
+
+.reserved {
+  background-color: #18a2b8;
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  margin-right: 10px;
+  margin-left: 0;
+  padding: 2px 8px;
 }
 
 .btn1 {
   padding: 10px 10px;
-  background-color: rgb(0, 132, 255);
+  background-color: #0084ff;
   color: #fff;
   border-radius: 3px;
   border-style: none;
@@ -44,4 +67,5 @@ code {
 
 .btn2 {
   padding: 5px 10px;
+  background-color: transparent;
 }

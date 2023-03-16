@@ -1,15 +1,18 @@
-import { useDispatch, useSelector } from "react-redux";
-import style from "./Rocket.module.css";
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import style from './Rocket.module.css';
+
+// import style from './Mission.module.css'
 import {
   joinRocket,
   leaveRocket,
-} from "../../redux/features/rockets/rocketsSlice";
+} from '../../redux/features/rockets/rocketsSlice';
 
 const Rocket = (props) => {
-  const { id, rocket_name, description, flickr_images, reserved } =
-    props.rocket;
+  const {
+    id, name, description, image, reserved,
+  } = props;
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.rockets);
 
   const handleReserveRocket = (id) => {
     dispatch(joinRocket(id));
@@ -23,27 +26,28 @@ const Rocket = (props) => {
     <>
       <div className={`${style.grid}`}>
         <div className={`${style.border}`}>
-          <img src={flickr_images[0]} className={`${style.img}`} />
+          <img src={image[0]} alt="rocketImage" className={`${style.img}`} />
         </div>
-        <div className={``}>
-          <h3>{rocket_name}</h3>
-          <p>
-            <span>
-              {reserved && (
-                <button className={`${style.btn1}`}>Reserved</button>
-              )}
-            </span>
+        <div className={style.descriptionContainer}>
+          <h3>{name}</h3>
+          <p className={style.description}>
+            {reserved && (
+              <span className={style.reserved}>
+                Reserved
+              </span>
+            )}
             {description}
           </p>
           {!reserved ? (
             <button
+              type="button"
               className={`${style.btn1}`}
               onClick={() => handleReserveRocket(id)}
             >
               Reserve Rocket
             </button>
           ) : (
-            <button className={`${style.btn2}`} onClick={() => handleLeaveReserveRocket(id)}>
+            <button type="button" className={`${style.btn2}`} onClick={() => handleLeaveReserveRocket(id)}>
               Cancel Reservation
             </button>
           )}
@@ -51,6 +55,17 @@ const Rocket = (props) => {
       </div>
     </>
   );
+};
+
+Rocket.defaultProps = {
+  id: '', name: '', description: '', image: '', reserved: '',
+};
+Rocket.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  reserved: PropTypes.string,
 };
 
 export default Rocket;
