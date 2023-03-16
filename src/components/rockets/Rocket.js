@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import style from './Rocket.module.css';
 
 // import style from './Mission.module.css'
 import {
@@ -27,18 +28,19 @@ const Rocket = (props) => {
         <div className={`${style.border}`}>
           <img src={image[0]} alt="rocketImage" className={`${style.img}`} />
         </div>
-        <div className={``}>
+        <div className={style.descriptionContainer}>
           <h3>{name}</h3>
-          <p>
-            <span>
-              {reserved && (
-                <button className={`${style.btn1}`}>Reserved</button>
-              )}
-            </span>
+          <p className={style.description}>
+            {reserved && (
+              <span className={style.reserved}>
+                Reserved
+              </span>
+            )}
             {description}
           </p>
           {!reserved ? (
-            <button type="button"
+            <button
+              type="button"
               className={`${style.btn1}`}
               onClick={() => handleReserveRocket(id)}
             >

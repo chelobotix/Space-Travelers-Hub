@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -11,7 +12,6 @@ export const fetchRockets = createAsyncThunk('get/rockets', async () => {
   const response = await fetch(url);
   let data = await response.json();
   data = data.map(({
-    // eslint-disable-next-line camelcase
     id, rocket_name, description, flickr_images,
   }) => ({
     id,

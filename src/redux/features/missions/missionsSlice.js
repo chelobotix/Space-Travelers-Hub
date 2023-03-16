@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -10,7 +11,6 @@ export const fetchMissions = createAsyncThunk('get/missions', async () => {
   const url = 'https://api.spacexdata.com/v3/missions';
   const response = await fetch(url);
   let data = await response.json();
-  // eslint-disable-next-line camelcase
   data = data.map(({ mission_id, mission_name, description }) => (
     { mission_id, mission_name, description }
   ));

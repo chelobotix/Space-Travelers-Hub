@@ -1,7 +1,7 @@
-import { v4 as uuidv4 } from "uuid";
-import { useSelector } from "react-redux";
-import Rocket from "./Rocket";
-import style from "./RocketList.module.css";
+import { v4 as uuidv4 } from 'uuid';
+import { useSelector } from 'react-redux';
+import Rocket from './Rocket';
+import style from './RocketList.module.css';
 
 const RocketList = () => {
   const state = useSelector((state) => state.rockets);
@@ -11,8 +11,8 @@ const RocketList = () => {
   }
 
   return (
-    <div>
-      <ul>
+    <div className={style.rocketsContainer}>
+      <ul className={style.ul}>
         {state.rocketsArray.map((rocket) => (
           <li key={uuidv4()}>
             <Rocket
