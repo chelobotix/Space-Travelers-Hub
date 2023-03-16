@@ -23,24 +23,33 @@ const Rocket = (props) => {
 
   return (
     <>
-      <div>
-        <img src={image[0]} alt="rocketImage" />
-      </div>
-      <div>
-        <h3>{name}</h3>
-        <p>
-          <span>{reserved && <p>Reserved</p>}</span>
-          {description}
-        </p>
-        {!reserved ? (
-          <button type="button" onClick={() => handleReserveRocket(id)}>
-            Reserve Rocket
-          </button>
-        ) : (
-          <button type="button" onClick={() => handleLeaveReserveRocket(id)}>
-            Cancel Reservation
-          </button>
-        )}
+      <div className={`${style.grid}`}>
+        <div className={`${style.border}`}>
+          <img src={image[0]} alt="rocketImage" className={`${style.img}`} />
+        </div>
+        <div className={``}>
+          <h3>{name}</h3>
+          <p>
+            <span>
+              {reserved && (
+                <button className={`${style.btn1}`}>Reserved</button>
+              )}
+            </span>
+            {description}
+          </p>
+          {!reserved ? (
+            <button type="button"
+              className={`${style.btn1}`}
+              onClick={() => handleReserveRocket(id)}
+            >
+              Reserve Rocket
+            </button>
+          ) : (
+            <button type="button" className={`${style.btn2}`} onClick={() => handleLeaveReserveRocket(id)}>
+              Cancel Reservation
+            </button>
+          )}
+        </div>
       </div>
     </>
   );
