@@ -20,7 +20,7 @@ const Mission = (props) => {
 
   return (
     <>
-      <td className={`${style.border} ${style.title}`}>
+      <td data-testid="titleTD" className={`${style.border} ${style.title}`}>
         {name}
       </td>
       <td className={`${style.border} ${style.description}`}>
@@ -41,13 +41,13 @@ const Mission = (props) => {
 };
 
 Mission.defaultProps = {
-  id: '', name: '', description: '', reserved: '',
+  id: '', name: '', description: '', reserved: false,
 };
 Mission.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string,
-  reserved: PropTypes.string,
+  reserved: PropTypes.bool,
 };
 
 export default Mission;

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mission Mission Tree 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <td
+        className="border title"
+        data-testid="titleTD"
+      >
+        Mission test
+      </td>
+      <td
+        className="border description"
+      >
+        Description Test
+      </td>
+      <td
+        className="border status"
+      >
+        <span
+          className="status1"
+        >
+          NOT A MEMBER
+        </span>
+      </td>
+      <td
+        className="border status"
+      >
+        <button
+          className="btn1"
+          onClick={[Function]}
+          type="button"
+        >
+          Join Mission
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

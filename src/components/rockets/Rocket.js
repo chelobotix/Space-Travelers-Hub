@@ -29,7 +29,7 @@ const Rocket = (props) => {
           <img src={image[0]} alt="rocketImage" className={`${style.img}`} />
         </div>
         <div className={style.descriptionContainer}>
-          <h3>{name}</h3>
+          <h3 data-testid="rocketName">{name}</h3>
           <p className={style.description}>
             {reserved && (
               <span className={style.reserved}>
@@ -58,14 +58,14 @@ const Rocket = (props) => {
 };
 
 Rocket.defaultProps = {
-  id: '', name: '', description: '', image: '', reserved: '',
+  id: 0, name: '', description: '', image: null, reserved: false,
 };
 Rocket.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.number,
   name: PropTypes.string,
   description: PropTypes.string,
-  image: PropTypes.string,
-  reserved: PropTypes.string,
+  image: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
+  reserved: PropTypes.bool,
 };
 
 export default Rocket;
