@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchMissions } from './redux/features/missions/missionsSlice';
@@ -18,7 +18,7 @@ function App() {
   });
 
   return (
-    <BrowserRouter>
+    <>
       <div className="App">
         <Header />
         <Routes>
@@ -28,7 +28,7 @@ function App() {
           <Route path="profile" element={<Profile />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </>
   );
 }
 
