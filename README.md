@@ -61,15 +61,18 @@
 
 - **Space-X Rockets page**
 - **Space-X Missions page**
+- **Space-X Profile page**
 - **Routing with React Route**
 - **API connection using Redux Toolkit AsyncThunk**
 - **Css module Style**
+- **Unit Test**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🧑🏻‍💻 Live Demo <a name="live-demo"></a>
 
-coming soon...
+[Live Demo](https://space-travelers-hub-ufkq.onrender.com)
+
 <br/>
 
 ## 💻 Getting Started <a name="getting-started"></a>
