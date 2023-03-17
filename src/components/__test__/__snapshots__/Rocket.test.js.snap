@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mission Rocket Tree 1`] = `
+<div
+  className="grid"
+>
+  <div
+    className="border"
+  >
+    <img
+      alt="rocketImage"
+      className="img"
+      src="image1.jpg"
+    />
+  </div>
+  <div
+    className="descriptionContainer"
+  >
+    <h3
+      data-testid="rocketName"
+    >
+      Rocket Falcon 1
+    </h3>
+    <p
+      className="description"
+    >
+      Description Test
+    </p>
+    <button
+      className="btn1"
+      onClick={[Function]}
+      type="button"
+    >
+      Reserve Rocket
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Rocket Rocket Tree 1`] = `
+<div
+  className="grid"
+>
+  <div
+    className="border"
+  >
+    <img
+      alt="rocketImage"
+      className="img"
+      src="image1.jpg"
+    />
+  </div>
+  <div
+    className="descriptionContainer"
+  >
+    <h3
+      data-testid="rocketName"
+    >
+      Rocket Falcon 1
+    </h3>
+    <p
+      className="description"
+    >
+      Description Test
+    </p>
+    <button
+      className="btn1"
+      onClick={[Function]}
+      type="button"
+    >
+      Reserve Rocket
+    </button>
+  </div>
+</div>
+`;

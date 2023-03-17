@@ -1,0 +1,9 @@
+.ul {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid #cecece;
+}
+
+.rocketsContainer {
+  padding: 0 10px;
+}
