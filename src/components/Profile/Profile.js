@@ -15,18 +15,20 @@ const Profile = () => {
   return (
     <div className={style.mainContainer}>
       <div className={style.missionContainer}>
-        <h2>My Missions</h2>
+        <h2 className={style.h2}>My Missions</h2>
         <ul className={style.ul}>
           {filterMissions.length > 0
-            ? filterMissions.map((mission) => <li key={uuidv4()}>{mission.mission_name}</li>)
+            ? filterMissions.map((mission) => (
+              <li className={style.li} key={uuidv4()}>{mission.mission_name}</li>))
             : <li>No Missions Joined</li>}
         </ul>
       </div>
       <div className={style.missionContainer}>
-        <h2>My Rockets</h2>
+        <h2 className={style.h2}>My Rockets</h2>
         <ul className={style.ul}>
           {filterRockets.length > 0
-            ? filterRockets.map((rocket) => <li key={uuidv4()}>{rocket.rocket_name}</li>)
+            ? filterRockets.map((rocket) => (
+              <li className={style.li} key={uuidv4()}>{rocket.rocket_name}</li>))
             : <li>No Rockets Reserved</li>}
         </ul>
       </div>

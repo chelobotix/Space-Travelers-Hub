@@ -1,18 +1,31 @@
 .mainContainer {
   display: flex;
   justify-content: center;
+  gap: 10px;
+  border-top: 1px solid #cecece;
+  padding-top: 10px;
 }
 
 .missionContainer {
-  width: 30%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #cecece;
-  padding: 10px;
+  padding: 10px 0;
+}
+
+.h2 {
+  margin: 0;
 }
 
 .ul {
+  width: 100%;
   list-style-type: none;
   padding: 0;
+  border: 1px solid #cecece;
+}
+
+.li {
+  border-bottom: 1px solid #cecece;
+  padding: 15px 5px;
 }
