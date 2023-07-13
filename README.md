@@ -71,7 +71,7 @@
 
 ## 🧑🏻‍💻 Live Demo <a name="live-demo"></a>
 
-[Live Demo](https://space-travelers-hub-ufkq.onrender.com)
+[Live Demo](https://friendly-axolotl-ffabbd.netlify.app/)
 
 <br/>
 
